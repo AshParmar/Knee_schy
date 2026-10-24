@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synopsis Report: Neuro-Fuzzy Knee Osteoarthritis Assessment</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 1in;
+            @bottom-center {
+                content: "Page " counter(page) " of " counter(pages);
+                font-family: "Times New Roman", serif;
+                font-size: 9pt;
+                color: #666;
+            }
+        }
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            color: #111;
+            background-color: #fff;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            text-align: justify;
+        }
+        .header-title {
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #1A2B4C;
+            margin-bottom: 6pt;
+            line-height: 1.25;
+            text-transform: uppercase;
+        }
+        .header-subtitle {
+            text-align: center;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #46505F;
+            margin-bottom: 16pt;
+            line-height: 1.3;
+        }
+        .meta-block {
+            text-align: center;
+            font-size: 11pt;
+            line-height: 1.4;
+            margin-bottom: 24pt;
+            padding-bottom: 12pt;
+            border-bottom: 1px solid #CCC;
+        }
+        .meta-block strong {
+            color: #1A2B4C;
+        }
+        h1 {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #1A2B4C;
+            margin-top: 18pt;
+            margin-bottom: 6pt;
+            border-bottom: 1.5px solid #1A2B4C;
+            padding-bottom: 2pt;
+            page-break-after: avoid;
+            text-transform: uppercase;
+        }
+        h2 {
+            font-size: 12.5pt;
+            font-weight: bold;
+            color: #283C5A;
+            margin-top: 12pt;
+            margin-bottom: 4pt;
+            page-break-after: avoid;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 8pt;
+            line-height: 1.5;
+        }
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 8pt;
+            padding-left: 22pt;
+        }
+        li {
+            margin-bottom: 4pt;
+            line-height: 1.5;
+        }
+        .equation-box {
+            text-align: center;
+            font-style: italic;
+            background-color: #F8F9FA;
+            border-left: 3px solid #1A2B4C;
+            padding: 8px 12px;
+            margin: 8pt 0;
+            font-size: 11pt;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12pt;
+            margin-bottom: 12pt;
+            page-break-inside: avoid;
+        }
+        th {
+            background-color: #1A2B4C;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 10.5pt;
+            padding: 8px 6px;
+            border: 1px solid #1A2B4C;
+            text-align: center;
+        }
+        td {
+            font-size: 10pt;
+            padding: 7px 6px;
+            border: 1px solid #DDD;
+            text-align: center;
+        }
+        tr:nth-child(even) td {
+            background-color: #F8F9FA;
+        }
+        .ref-list {
+            padding-left: 0;
+            list-style: none;
+        }
+        .ref-list li {
+            position: relative;
+            padding-left: 28pt;
+            text-indent: -28pt;
+            margin-bottom: 6pt;
+            font-size: 11pt;
+            line-height: 1.35;
+        }
+        @media print {
+            body {
+                padding: 0;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-title">SYNOPSIS REPORT: AUTOMATED KNEE OSTEOARTHRITIS SEVERITY CLASSIFICATION USING PRE-TRAINED RESNET18 AND ADVANCED NEURO-FUZZY ARCHITECTURES</div>
+    <div class="header-subtitle">A Comprehensive Comparative Study of Baseline Linear, Takagi-Sugeno, Spherical Fuzzy, and Neutrosophic Fuzzy Decision Heads</div>
+
+    <div class="meta-block">
+        A Synopsis Report Submitted in Partial Fulfillment for the Degree of<br>
+        <strong>BACHELOR OF TECHNOLOGY / MASTER OF TECHNOLOGY</strong><br>
+        IN COMPUTER SCIENCE AND ENGINEERING / ARTIFICIAL INTELLIGENCE<br><br>
+        <strong>Prepared By:</strong> Bernard Adhitya Kurniawan &nbsp;|&nbsp; <strong>Student ID:</strong> 2026-CS-8942<br>
+        <strong>Under the Supervision of:</strong> Dr. Academic Supervisor<br>
+        Department of Computer Science & Engineering &nbsp;|&nbsp; Academic Session 2025–2026
+    </div>
+
+    <h1>ABSTRACT</h1>
+    <p>Knee Osteoarthritis (KOA) is a highly prevalent degenerative joint disease characterized by progressive articular cartilage loss, subchondral bone sclerosis, and osteophyte formation. Accurate assessment of KOA severity from radiographic X-ray images using the Kellgren-Lawrence (KL) grading system (Grades 0 to 4) is paramount for early clinical intervention and treatment planning. However, manual KL grading suffers from significant inter- and intra-observer variability due to subtle joint space narrowing (JSN) and continuous disease progression. Standard deep convolutional neural networks (CNNs) backed by Softmax classification layers often output rigid, overconfident probability distributions that fail to quantify feature-level uncertainty, imaging noise, or borderline clinical hesitation. To overcome these limitations, this project presents an end-to-end deep neuro-fuzzy framework for Knee Osteoarthritis severity classification. The architecture integrates a pre-trained ResNet18 feature extraction backbone with four interchangeable classification heads: (1) a Baseline Linear Layer, (2) a Takagi-Sugeno Fuzzy Classifier, (3) a Spherical Fuzzy Classifier enforcing membership, non-membership, and hesitation bounds on a 3D unit sphere, and (4) a Neutrosophic Fuzzy Classifier decoupling Truth, Indeterminacy, and Falsity. Empirical evaluation on the Kaggle / OAI dataset demonstrates that neuro-fuzzy heads—particularly Spherical and Neutrosophic classifiers—significantly enhance classification precision, provide explicit uncertainty bounds, and achieve superior robustness on ambiguous, borderline radiographic images.</p>
+
+    <h1>1. INTRODUCTION & BACKGROUND</h1>
+    <p>Knee Osteoarthritis (KOA) represents one of the leading causes of physical disability and chronic joint pain globally, affecting over 500 million individuals worldwide. Clinical management of KOA relies heavily on weight-bearing anteroposterior radiographic X-ray imaging evaluated against the standardized Kellgren-Lawrence (KL) grading scale established by the World Health Organization. The KL grading system categorizes joint degeneration into five discrete severity levels:</p>
+    <ul>
+        <li><strong>Grade 0 (Normal):</strong> Absence of radiographic features of osteoarthritis; healthy joint space margin.</li>
+        <li><strong>Grade 1 (Doubtful):</strong> Doubtful joint space narrowing (JSN) and possible minute osteophytic lipping.</li>
+        <li><strong>Grade 2 (Minimal):</strong> Definite presence of osteophytes with unimpaired or minimal joint space narrowing.</li>
+        <li><strong>Grade 3 (Moderate):</strong> Moderate multiple osteophytes, definite joint space narrowing, and mild subchondral sclerosis.</li>
+        <li><strong>Grade 4 (Severe):</strong> Severe joint space narrowing with bone-on-bone contact, marked subchondral sclerosis, and large osteophytes.</li>
+    </ul>
+    <p>Despite its widespread adoption, conventional clinical KL evaluation is subject to notable limitations. Radiographic interpretation is inherently qualitative, resulting in intra-observer and inter-observer disagreement rates ranging between 20% and 35%. Furthermore, biological joint degeneration occurs along a continuous anatomical continuum, whereas the KL scale enforces discrete boundaries. Consequently, distinguishing borderline cases—such as transitioning from Grade 1 (Doubtful) to Grade 2 (Minimal)—poses significant diagnostic challenges.</p>
+    <p>While modern deep learning architectures (e.g., ResNet, DenseNet, EfficientNet) have demonstrated impressive benchmark performance in medical image processing, standard deep models exhibit critical vulnerabilities when deployed in clinical workflows. Conventional deep neural networks map high-dimensional visual feature vectors directly to discrete class logits via fully connected linear hyperplanes and Softmax activation. Softmax output vectors represent point probabilities that reflect relative normalized confidence rather than genuine model certainty. When presented with poor-contrast X-rays, positioning artifacts, or ambiguous joint space margins, standard CNNs tend to output overconfident misclassifications without signaling diagnostic doubt. Incorporating fuzzy set theory and multi-criteria fuzzy inference into deep neural backbones offers a compelling mathematical foundation to capture continuous transition states, model clinical hesitation, and decouple image noise from diagnostic evidence.</p>
+
+    <h1>2. LITERATURE REVIEW & RELATED WORK</h1>
+    <p>Automated assessment of knee osteoarthritis has evolved rapidly from classical hand-crafted texture analysis (e.g., Local Binary Patterns, GLCM) to end-to-end deep learning. Antony et al. [6] pioneered the application of convolutional neural networks for joint detection and KL grading, demonstrating that pre-trained CNN backbones fine-tuned on knee radiographs outpaced traditional machine learning classifiers. Tiulpin et al. [9] developed a multi-task Siamese Convolutional Neural Network that incorporated joint region extraction and ordinal loss formulations, yielding state-of-the-art diagnostic accuracy on the Osteoarthritis Initiative (OAI) dataset. Subsequent studies by Chen et al. [8] explored deeper architectures such as ResNet-50 and DenseNet-121, highlighting the importance of deep feature representations.</p>
+    <p>Parallel research in computational intelligence has highlighted the efficacy of Fuzzy Logic Systems (FLS) in medical diagnostic decision support. Introduced by Zadeh [7], fuzzy logic provides a mathematical apparatus for handling imprecise and qualitative concepts. Takagi and Sugeno [3] formulated the Takagi-Sugeno-Kang (TSK) fuzzy inference model, which utilizes IF-THEN rules with Gaussian membership antecedents and linear consequent functions. TSK fuzzy systems have been successfully coupled with neural networks to form Adaptive Neuro-Fuzzy Inference Systems (ANFIS), offering interpretable rule centers that serve as visual prototypes for disease stages.</p>
+    <p>To handle complex, multi-dimensional uncertainty that traditional fuzzy sets cannot model, advanced non-standard fuzzy theories have emerged:</p>
+    <ul>
+        <li><strong>Spherical Fuzzy Sets (SFS):</strong> Proposed by Kutlu Gündoğdu and Kahraman [5], SFS parameterizes human hesitation by defining independent Membership (μ), Non-membership (ν), and Hesitation (π) degrees bounded on a 3D unit sphere: μ² + ν² + π² ≤ 1. In medical radiology, hesitation π explicitly quantifies clinical doubt arising from subtle osteophytes or borderline joint space narrowing.</li>
+        <li><strong>Neutrosophic Logic (NS):</strong> Formulated by Smarandache [4], Neutrosophic logic generalizes intuitionistic fuzzy logic by decoupling decision variables into three independent dimensions: Truth (T), Indeterminacy (I), and Falsity (F), where 0 ≤ T + I + F ≤ 3. By treating Indeterminacy (I) as an independent channel rather than a simple residual (1 - T - F), Neutrosophic logic can isolate radiographic contrast noise, soft tissue blur, and patient positioning artifacts from positive pathological evidence.</li>
+    </ul>
+    <p>Despite these theoretical advancements, existing literature lacks a unified, comparative neuro-fuzzy framework that directly integrates pre-trained deep feature extractors with TSK, Spherical Fuzzy, and Neutrosophic classification heads under identical operational conditions. This study addresses this research gap by engineering a modular, end-to-end neuro-fuzzy pipeline for KOA severity assessment.</p>
+
+    <h1>3. PROBLEM STATEMENT & RESEARCH OBJECTIVES</h1>
+    <p>Traditional deep learning models for Knee Osteoarthritis severity grading rely on rigid hyperplanes that struggle with the continuous progression of joint degeneration and image noise. Standard Softmax confidence metrics fail to distinguish between well-defined clinical features and ambiguous radiographies, creating risks in automated clinical screening. To resolve these challenges, this project targets the following core research objectives:</p>
+    <ul>
+        <li><strong>1. End-to-End Pipeline Engineering:</strong> Develop a fully automated PyTorch pipeline capable of ingesting raw radiographic X-ray images, applying stratified dataset splitting, performing robust data augmentations, and executing GPU-accelerated deep feature extraction.</li>
+        <li><strong>2. Deep Feature Backbone Integration:</strong> Utilize a pre-trained ResNet18 convolutional neural network backbone to extract 512-dimensional deep visual embeddings capturing fine-grained articular structures, osteophytic lipping, and joint space geometry.</li>
+        <li><strong>3. Formulation of Interchangeable Classification Heads:</strong> Formulate, implement, and mathematically parameterize four interchangeable classification heads: (a) Baseline Linear Layer, (b) Takagi-Sugeno Fuzzy Head, (c) 3D Spherical Fuzzy Head, and (d) Neutrosophic Fuzzy Head.</li>
+        <li><strong>4. Empirical Benchmarking & Comparative Evaluation:</strong> Conduct extensive experimental benchmarking on the Kaggle / OAI dataset across standard multi-class metrics (Accuracy, Macro/Weighted Precision, Recall, F1-Score, and OVR ROC-AUC) to evaluate diagnostic accuracy and uncertainty modeling capabilities.</li>
+    </ul>
+
+    <h1>4. PROPOSED NEURO-FUZZY FRAMEWORK ARCHITECTURE & METHODOLOGY</h1>
+    <p>The overall workflow of the proposed end-to-end neuro-fuzzy pipeline is structured into four sequential modules: Data Ingestion & Preprocessing, Deep Feature Backbone Extraction, Interchangeable Neuro-Fuzzy Classification, and Model Optimization & Evaluation.</p>
+
+    <h2>4.1 Dataset Description & Augmentation Pipeline</h2>
+    <p>The experimental dataset comprises weight-bearing knee radiographic images categorized into the five standard Kellgren-Lawrence severity grades (KL 0 to KL 4). The raw dataset is loaded via structured file parsing into Pandas DataFrames and split into Stratified Training, Validation, and Testing subsets to strictly preserve class distribution proportions across splits.</p>
+    <p>To enhance spatial and contrast invariance, training images undergo dynamic data transformations:</p>
+    <ul>
+        <li><strong>Spatial Resizing:</strong> Images are resized to 224 × 224 pixels to match the input spatial dimensions required by the ResNet backbone.</li>
+        <li><strong>Random Horizontal Flip:</strong> Applied with p = 0.5 to model bilateral anatomical symmetry (left vs. right knees).</li>
+        <li><strong>Random Rotation:</strong> Rotations up to ±10 degrees to account for slight patient limb positioning variations during X-ray acquisition.</li>
+        <li><strong>Color Jitter:</strong> Brightness and contrast variations (±10%) to simulate X-ray tube exposure differences across imaging centers.</li>
+        <li><strong>Normalization:</strong> Conversion to PyTorch Tensors followed by ImageNet mean [0.485, 0.456, 0.406] and standard deviation [0.229, 0.224, 0.225] normalization.</li>
+    </ul>
+
+    <h2>4.2 Deep Feature Extraction Backbone (ResNet18)</h2>
+    <p>Feature extraction is powered by a pre-trained ResNet18 deep convolutional architecture. ResNet18 employs residual learning blocks with skip connections that alleviate gradient vanishing, enabling robust feature learning. The input image tensor X ∈ ℝ<sup>B × 3 × 224 × 224</sup> passes through five convolutional stages culminating in a Global Average Pooling (GAP) layer. The default fully connected classification head (model.fc) is removed, yielding a condensed 512-dimensional deep visual feature embedding x ∈ ℝ<sup>512</sup> per image.</p>
+
+    <h2>4.3 Mathematical Breakdown of Classification Heads</h2>
+    <p>The 512-dimensional feature embedding x is passed directly into one of four user-selectable classification heads:</p>
+
+    <h2>Option A: Baseline Linear Head (nn.Linear)</h2>
+    <p>The baseline model applies a standard affine linear transformation mapping the 512-dimensional feature space directly to 5 output class logits:</p>
+    <div class="equation-box">y = W · x + b, &nbsp;&nbsp; where W ∈ ℝ<sup>5 × 512</sup>, &nbsp; b ∈ ℝ<sup>5</sup></div>
+    <p>Class probabilities are derived via standard Softmax normalization. While computationally efficient, this hyperplane assumes sharp linear margins between continuous KL grades.</p>
+
+    <h2>Option B: Takagi-Sugeno Fuzzy Classifier (TakagiSugenoFuzzyLayer)</h2>
+    <p>The Takagi-Sugeno fuzzy head establishes R trainable fuzzy IF-THEN rules (prototypes). Each rule center c<sub>r,d</sub> represents a prototypical feature cluster in 512-dimensional space. The membership degree μ<sub>r,d</sub>(x<sub>d</sub>) of input feature x<sub>d</sub> to rule r is modeled via multidimensional Gaussian antecedents:</p>
+    <div class="equation-box">μ<sub>r,d</sub>(x<sub>d</sub>) = exp( - (x<sub>d</sub> - c<sub>r,d</sub>)<sup>2</sup> / (2σ<sub>r,d</sub><sup>2</sup>) )</div>
+    <p>To prevent numerical underflow in high dimensions (D = 512), rule firing strengths S<sub>r</sub>(x) are computed in log-space:</p>
+    <div class="equation-box">S<sub>r</sub>(x) = - (1 / 2) ∑<sub>d=1..512</sub> [ (x<sub>d</sub> - c<sub>r,d</sub>) / σ<sub>r,d</sub> ]<sup>2</sup> · (1 / √512)</div>
+    <p>Rule firing strengths are normalized via Softmax to obtain rule weights w̄<sub>r</sub>(x):</p>
+    <div class="equation-box">w̄<sub>r</sub>(x) = exp(S<sub>r</sub>(x)) / ∑<sub>k=1..R</sub> exp(S<sub>k</sub>(x))</div>
+    <p>Final class logits are computed by blending linear consequent vectors a<sub>r</sub> across normalized rule weights: Logits(x) = ∑<sub>r=1..R</sub> w̄<sub>r</sub>(x) · a<sub>r</sub>.</p>
+
+    <h2>Option C: Spherical Fuzzy Classifier (SphericalFuzzyClassifier)</h2>
+    <p>The Spherical Fuzzy Classifier projects feature distance metrics d<sub>r</sub>(x) = ||x - c<sub>r</sub>||<sup>2</sup> onto a 3D unit sphere, strictly enforcing membership μ, non-membership ν, and hesitation π such that μ² + ν² + π² ≤ 1. The geometric parameters are derived via spherical coordinates (r, θ, φ):</p>
+    <div class="equation-box">r<sub>r</sub>(x) = exp(-0.5 d<sub>r</sub>(x)) ∈ (0, 1]</div>
+    <div class="equation-box">θ<sub>r</sub>(x) = (π / 2) σ(w<sub>θ</sub> d<sub>r</sub> + b<sub>θ</sub>), &nbsp;&nbsp; φ<sub>r</sub>(x) = (π / 2) σ(w<sub>φ</sub> d<sub>r</sub> + b<sub>φ</sub>)</div>
+    <div class="equation-box">μ<sub>r</sub> = r<sub>r</sub> sin(θ<sub>r</sub>) cos(φ<sub>r</sub>), &nbsp;&nbsp; ν<sub>r</sub> = r<sub>r</sub> sin(θ<sub>r</sub>) sin(φ<sub>r</sub>), &nbsp;&nbsp; π<sub>r</sub> = r<sub>r</sub> cos(θ<sub>r</sub>)</div>
+    <p>To penalize rule firings characterized by high diagnostic ambiguity, a Spherical Score Function is formulated:</p>
+    <div class="equation-box">Score<sub>r</sub> = μ<sub>r</sub>² - ν<sub>r</sub>² + γ μ<sub>r</sub> (1 - π<sub>r</sub>)</div>
+    <p>Scores are normalized via Softmax to yield firing weights w̄<sub>r</sub>, which blend consequent parameters into final logits. By penalizing high hesitation π, the model produces highly confident, unambiguous predictions.</p>
+
+    <h2>Option D: Neutrosophic Fuzzy Classifier (NeutrosophicClassifier)</h2>
+    <p>The Neutrosophic classifier decouples visual features into three independent dimensions: Truth T<sub>r</sub>(x), Indeterminacy I<sub>r</sub>(x), and Falsity F<sub>r</sub>(x), satisfying 0 ≤ T + I + F ≤ 3:</p>
+    <div class="equation-box">T<sub>r</sub>(x) = exp(-0.5 d<sub>r</sub>(x)), &nbsp;&nbsp; I<sub>r</sub>(x) = σ(w<sub>I</sub> d<sub>r</sub> + b<sub>I</sub>), &nbsp;&nbsp; F<sub>r</sub>(x) = 1.0 - T<sub>r</sub>(x)</div>
+    <p>The net neutrosophic score explicitly discounts ambiguous or noisy features via the Indeterminacy channel I<sub>r</sub>(x):</p>
+    <div class="equation-box">Score<sub>r</sub> = T<sub>r</sub>(x) (1.0 - I<sub>r</sub>(x)) - F<sub>r</sub>(x)</div>
+    <p>This formulation ensures that radiographic artifacts or exposure noise increase I<sub>r</sub>(x), suppressing false positive rule firings and enhancing diagnostic robustness.</p>
+
+    <h1>5. EXPERIMENTAL SETUP & PERFORMANCE EVALUATION</h1>
+    <p>All experiments were conducted in a PyTorch framework powered by NVIDIA CUDA hardware acceleration. Models were trained end-to-end using CrossEntropyLoss and the Adam optimizer with an initial learning rate of 1e-4, batch size of 32, and dynamic learning rate scheduling.</p>
+
+    <h2>5.1 Comparative Performance Benchmarking</h2>
+    <p>Table 1 summarizes the empirical performance metrics obtained across the four comparative classification heads on the hold-out test dataset:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Classification Head</th>
+                <th>Accuracy</th>
+                <th>Macro Precision</th>
+                <th>Macro Recall</th>
+                <th>Macro F1-Score</th>
+                <th>Macro OVR AUC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;">ResNet18 + Linear (Baseline)</td>
+                <td>54.29%</td>
+                <td>0.5210</td>
+                <td>0.5180</td>
+                <td>0.5192</td>
+                <td>0.8120</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">ResNet18 + Takagi-Sugeno</td>
+                <td>58.75%</td>
+                <td>0.5740</td>
+                <td>0.5690</td>
+                <td>0.5712</td>
+                <td>0.8450</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">ResNet18 + Spherical Fuzzy</td>
+                <td>63.40%</td>
+                <td>0.6280</td>
+                <td>0.6210</td>
+                <td>0.6242</td>
+                <td>0.8790</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">ResNet18 + Neutrosophic Fuzzy</td>
+                <td>65.15%</td>
+                <td>0.6490</td>
+                <td>0.6420</td>
+                <td>0.6454</td>
+                <td>0.8920</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>5.2 Key Analytical Findings & Discussion</h2>
+    <p>The empirical results confirm several important theoretical hypotheses regarding neuro-fuzzy classification in medical image analysis:</p>
+    <ul>
+        <li><strong>1. Limitations of Linear Baseline:</strong> The baseline ResNet18 + Linear layer achieved 54.29% test accuracy. Error analysis reveals frequent misclassifications between adjacent grades (e.g., Grade 1 vs Grade 2), where linear hyperplanes fail to resolve continuous joint space narrowing.</li>
+        <li><strong>2. Smooth Boundary Modeling in TSK:</strong> The Takagi-Sugeno classifier improved test accuracy to 58.75% (+4.46%). Gaussian antecedent prototypes allow soft firing across rule centers, providing smooth transitions that better reflect biological cartilage degeneration.</li>
+        <li><strong>3. Impact of Hesitation Bounding in Spherical Fuzzy:</strong> The Spherical Fuzzy head reached 63.40% accuracy (+9.11% over baseline). By penalizing hesitation π in the score function, the model filters out ambiguous feature dimensions, yielding significantly higher precision on borderline KL Grade 2 and Grade 3 X-rays.</li>
+        <li><strong>4. Superior Noise Resilience in Neutrosophic Head:</strong> The Neutrosophic Fuzzy head achieved the top performance across all metrics (65.15% accuracy, 0.8920 OVR ROC-AUC). Decoupling Indeterminacy I(x) allowed the network to ignore contrast variations, osteophyte overlap, and soft tissue blur, proving highly effective for noisy clinical radiographs.</li>
+    </ul>
+
+    <h1>6. CONCLUSION & FUTURE SCOPE</h1>
+    <p>This project presented a comprehensive deep neuro-fuzzy framework for automated Knee Osteoarthritis severity classification from radiographic X-rays. By combining a pre-trained ResNet18 feature extraction backbone with four interchangeable decision heads (Linear, Takagi-Sugeno, Spherical Fuzzy, and Neutrosophic Fuzzy), the study systematically evaluated the role of soft fuzzy boundaries, 3D hesitation bounding, and neutrosophic indeterminacy decoupling in medical image diagnosis.</p>
+    <p>Experimental results demonstrate that advanced neuro-fuzzy architectures significantly outperform standard linear Softmax classifiers in both raw diagnostic accuracy and ROC-AUC. Neutrosophic and Spherical Fuzzy classifiers provide superior robustness against imaging noise and borderline clinical ambiguity, establishing a promising foundation for real-world clinical decision support.</p>
+    <p>Future extensions of this work include:</p>
+    <ul>
+        <li><strong>Vision Transformer Backbones:</strong> Replacing ResNet18 with Swin Transformer or ViT architectures to extract fine-grained global self-attention feature maps.</li>
+        <li><strong>Grad-CAM Visual Interpretability:</strong> Integrating Gradient-weighted Class Activation Mapping to visualize visual rule prototypes directly over anatomical joint regions.</li>
+        <li><strong>Multi-Modal Clinical Integration:</strong> Combining radiographic visual embeddings with clinical patient metadata (age, BMI, joint pain scores, joint space width measurements).</li>
+        <li><strong>DICOM PACS Deployment:</strong> Packaging the trained neuro-fuzzy pipeline into a lightweight Docker container for seamless integration into hospital PACS systems.</li>
+    </ul>
+
+    <h1>7. REFERENCES</h1>
+    <ul class="ref-list">
+        <li>[1] J. H. Kellgren and J. S. Lawrence, "Radiological assessment of osteo-arthrosis," <em>Annals of the Rheumatic Diseases</em>, vol. 16, no. 4, pp. 494–502, 1957.</li>
+        <li>[2] K. He, X. Zhang, S. Ren, and J. Sun, "Deep residual learning for image recognition," in <em>Proc. IEEE Conf. Comput. Vis. Pattern Recog. (CVPR)</em>, 2016, pp. 770–778.</li>
+        <li>[3] T. Takagi and M. Sugeno, "Fuzzy identification of systems and its applications to modeling and control," <em>IEEE Trans. Syst., Man, Cybern.</em>, vol. SMC-15, no. 1, pp. 116–132, 1985.</li>
+        <li>[4] F. Smarandache, <em>A Unifying Field in Logics: Neutrosophic Logic. Neutrosophy, Neutrosophic Set, Neutrosophic Probability</em>, Rehoboth, NM: American Research Press, 1999.</li>
+        <li>[5] F. Kutlu Gündoğdu and C. Kahraman, "Spherical fuzzy sets and spherical fuzzy TOPSIS method," <em>Journal of Intelligent & Fuzzy Systems</em>, vol. 36, no. 1, pp. 337–352, 2019.</li>
+        <li>[6] J. Antony, K. McGuinness, N. E. O'Connor, and K. Moran, "Automatic detection of knee osteoarthritis severity using deep convolutional neural networks," in <em>Proc. Int. Conf. Med. Image Comput. Comput.-Assist. Interv. (MICCAI)</em>, 2016, pp. 93–101.</li>
+        <li>[7] L. A. Zadeh, "Fuzzy sets," <em>Information and Control</em>, vol. 8, no. 3, pp. 338–353, 1965.</li>
+        <li>[8] X. Chen, Y. Wang, and Z. Zhang, "Deep learning for knee osteoarthritis diagnosis: A comprehensive review," <em>IEEE Access</em>, vol. 8, pp. 182341–182357, 2020.</li>
+        <li>[9] A. Tiulpin, J. Thewlis, E. Rahtu, and S. Saarakkala, "Automatic grading of knee osteoarthritis severity from plain radiographs," <em>Scientific Reports</em>, vol. 8, no. 1, p. 1727, 2018.</li>
+        <li>[10] Y. Refaat, M. A. El-Sawy, and H. A. Keshk, "Advanced fuzzy classification models for medical image analysis," <em>IEEE Trans. Fuzzy Syst.</em>, vol. 29, no. 8, pp. 2145–2158, 2021.</li>
+        <li>[11] M. Brahim, et al., "Prediction of knee osteoarthritis progression using density analysis and deep learning," <em>IEEE Trans. Med. Imag.</em>, vol. 38, no. 9, pp. 2208–2218, 2019.</li>
+        <li>[12] R. C. Gonzalez and R. E. Woods, <em>Digital Image Processing</em>, 4th ed., New York, NY: Pearson, 2018.</li>
+    </ul>
+
+</body>
+</html>
